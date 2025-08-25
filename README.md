@@ -52,8 +52,9 @@ Probability of finishing on or above the step 70 (1000 walks, 100 rolls per walk
 Probability of finishing on or above the step 70 (1000 walks, 100 rolls per walk, clumsiness=0.1%): 0.599
 - The distribution of final steps tends to be concentrated around a certain range, but with significant spread due to the random nature of the process.
   
-  ![](images/fs_dist_1000_0.5_60.png)
-  *Probability of finishing on or above the step 60 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 0.611*
+![Probability of finishing on or above the step 60 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 0.611](images/fs_dist_1000_100_0.5_60.png)
+
+*Probability of finishing on or above the step 60 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 0.611*
   
 - The "clumsiness" factor significantly impacts the probability of reaching higher steps, as falls reset progress.
 - Increasing the number of rolls generally shifts the distribution of final steps towards higher values, but also increases variability.
