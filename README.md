@@ -30,7 +30,7 @@ A key feature is the inclusion of a "clumsiness" factor, where there's a small p
    
    Parameter N°4: `total_walks` The total number of random walks simulated.
 
-If we give the code a big number of `total_walks`, we can get a clear probability of reaching the `limit_step` with the given context. The project returns this probabilty, and also explores the distribution of final steps after a set number of rolls and visualizes individual walk trajectories.
+If we give the code a big number of `total_walks`, we can get a clear probability of reaching the `limit_step` on the given context. The project returns this probabilty, and also explores the distribution of final steps after a set number of rolls and visualizes individual walk trajectories.
 
 ## Analysis Objectives
 The main objectives of this analysis are:
