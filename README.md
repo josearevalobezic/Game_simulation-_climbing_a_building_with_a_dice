@@ -13,24 +13,22 @@ Playing a game with a dice: up to which step of the staircase of a building can 
 - [Contact](#contact)
 
 ## Description
-This project simulates and analyzes random walk process using Python. The simulation is a game, which consists on climbing the staircase of a building, betting if we can get to a certain step of the staircase with a certain amount of dice rolls with specific rules- for stepping forward, backward, or rolling again:
+This project simulates and analyzes a random walk process using Python. The simulation represents a game played on a staircase, where the goal is to reach a certain step within a set number of dice rolls. The rules for stepping are specific:
 
-- If the dice results 1 or 2, go down a step
-- If the dice results between 3 to 5, go up a step
-- If the dice turns 6, roll again and go up the dice result.
+- If the dice roll is 1 or 2, move down one step (minimum step is 0).
+- If the dice roll is between 3 and 5, move up one step.
+- If the dice roll is 6, roll the dice again and move up by the result of the second roll.
 
-A key feature is the inclusion of a "clumsiness" factor, where there's a small probability of falling back to the starting step 0. 
-4 Parameters are given to the user in order to explore an analyse different scenarios:
+A key feature is the inclusion of a "clumsiness" factor, a small probability of falling back to the starting step (0) after any roll.
 
-   Parameter N°1: `limit_step`step we are aiming to reach
-   
-   Parameter N°2: `num_rolls` number of time the dice will be roll
-   
-   Parameter N°3: `clumsiness` clumsiness, a probability of falling while climbing up the stairs
-   
-   Parameter N°4: `total_walks` The total number of random walks simulated.
+The project allows users to explore different scenarios by adjusting four parameters:
 
-If we give the code a big number of `total_walks`, we can get a clear probability of reaching the `limit_step` on the given context. The project returns this probabilty, and also explores the distribution of final steps after a set number of rolls and visualizes individual walk trajectories.
+- `limit_step`: The target step to reach.
+- `num_rolls`: The number of times the dice is rolled per walk.
+- `clumsiness`: The probability of falling back to step 0.
+- `total_walks`: The total number of random walks to simulate.
+
+By simulating a large number of walks, the project provides an empirical probability of reaching or exceeding the `limit_step` within the given context. It also explores the distribution of final steps after `num_rolls` and visualizes individual walk trajectories.
 
 ## Analysis Objectives
 The main objectives of this analysis are:
