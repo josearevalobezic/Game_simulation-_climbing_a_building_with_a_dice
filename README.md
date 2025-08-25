@@ -44,13 +44,17 @@ The main objectives of this analysis are:
 5.  To study the impact of simulation parameters (like the number of rolls, number of walks, and clumsiness probability) on the results.
 
 ## Key Insights
-*(This section should be filled in after running the code and observing the results. Here are some examples of insights you might find)*
 
-Probability of finishing on or above the step 60 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 0.611
+
+
 Probability of finishing on or above the step 60 (1000 walks, 50 rolls per walk, clumsiness=0.5%): 0.045
 Probability of finishing on or above the step 70 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 0.400
 Probability of finishing on or above the step 70 (1000 walks, 100 rolls per walk, clumsiness=0.1%): 0.599
 - The distribution of final steps tends to be concentrated around a certain range, but with significant spread due to the random nature of the process.
+  
+  ![](images/fs_dist_1000_0.5_60.png)
+  *Probability of finishing on or above the step 60 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 0.611*
+  
 - The "clumsiness" factor significantly impacts the probability of reaching higher steps, as falls reset progress.
 - Increasing the number of rolls generally shifts the distribution of final steps towards higher values, but also increases variability.
 - Even with a small clumsiness probability, a notable percentage of walks may end at step 0.
