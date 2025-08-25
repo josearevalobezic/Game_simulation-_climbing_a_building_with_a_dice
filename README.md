@@ -47,31 +47,59 @@ The main objectives of this analysis are:
 
 
 
-Probability of finishing on or above the step 60 (1000 walks, 50 rolls per walk, clumsiness=0.5%): 0.045
-Probability of finishing on or above the step 70 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 0.400
-Probability of finishing on or above the step 70 (1000 walks, 100 rolls per walk, clumsiness=0.1%): 0.599
-- The distribution of final steps tends to be concentrated around a certain range, but with significant spread due to the random nature of the process.
-  
-![Probability of finishing on or above the step 60 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 0.611](images/fs_dist_1000_100_0.5_60.png)
 
-*Probability of finishing on or above the step 60 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 0.611*
+- The distribution of final steps tends to be concentrated around a certain range, but with significant spread due to the random nature of the process.
+
   
+![Probability of finishing on or above the step 60 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 61%](images/fs_dist_1000_100_0.5_60.png)
+
+*Probability of finishing on or above the step 60 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 61%*
+
+
+
+
+
 - The "clumsiness" factor significantly impacts the probability of reaching higher steps, as falls reset progress.
+
+![Probability of finishing on or above the step 70 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 40%](images/fs_dist_1000_100_0.5_70.png)
+
+*Probability of finishing on or above the step 70 (1000 walks, 100 rolls per walk, clumsiness=0.5%): 40%*
+
+![Probability of finishing on or above the step 70 (1000 walks, 100 rolls per walk, clumsiness=0.1%): 59.9%](images/fs_dist_1000_100_0.1_70.png)
+
+*Probability of finishing on or above the step 70 (1000 walks, 100 rolls per walk, clumsiness=0.1%): 59.9%*
+
+
+
+  
 - Increasing the number of rolls generally shifts the distribution of final steps towards higher values, but also increases variability.
+
+![Probability of finishing on or above the step 60 (1000 walks, 50 rolls per walk, clumsiness=0.5%): 45%](images/fs_dist_1000_50_0.5_60.png)
+
+*Probability of finishing on or above the step 60 (1000 walks, 50 rolls per walk, clumsiness=0.5%): 45%*
+
+  
 - Even with a small clumsiness probability, a notable percentage of walks may end at step 0.
+
+![](images/Walk_structure_0.5_100.png)
+
+![](images/Walk_structure_0.1_100.png)
+
 
 ## Repository Structure
 
 ```
-coin_flip_simulation_and_analysis/  ├── README.md 
-                                    ├── coin_flip_simulation_and_analysis.ipynb # Your Jupyter Notebook file 
-                                    ├── coin_flip_simulation_and_analysis # separate script
-                                    ├── requirements.txt # required libraries
-                                    └── images/ # Directory for plots and figures │ 
-                                        ├── histogram_fair_coin.png │ 
-                                        ├── proportion_fair_coin.png │ 
-                                        ├── histogram_biased_coin.png │ 
-                                        └── proportion_biased_coin.png 
+Game_simulation-_climbing_a_building_with_a_dice  ├── README.md 
+                                                  ├── notebook.ipynb # Your Jupyter Notebook file 
+                                                  ├── script # separate script
+                                                  ├── requirements.txt # required libraries
+                                                  └── images/ # Directory for plots and figures 
+                                                       ├── Walk_structure_0.1_100.png 
+                                                       ├── Walk_structure_0.5_100.png
+                                                       ├── fs_dist_1000_100_0.1_70.png
+                                                       ├── fs_dist_1000_100_0.5_60.png
+                                                       ├── fs_dist_1000_100_0.5_70.png  
+                                                       └── fs_dist_1000_50_0.5_60.png  
                                          
 ```
 
