@@ -6,13 +6,10 @@ Playing a game with a dice: up to which step of the staircase of a building can 
 ## Table of Contents
 - [Description](#description)
 - [Analysis Objectives](#analysis-objectives)
-- [Key Insights](#key-insights)
 - [Repository Structure](#repository-structure)
 - [Installation and Usage](#installation-and-usage)
-- [Simulation Parameters](#simulation-parameters)
 - [Code Explanation](#code-explanation)
-- [Future Improvements](#future-improvements)
-- [License](#license)
+- [Key Insights](#key-insights)
 - [Contact](#contact)
 
 ## Description
@@ -42,6 +39,59 @@ The main objectives of this analysis are:
 3.  To calculate the empirical probability of reaching or exceeding a specific step limit.
 4.  To visualize the trajectories of individual random walks to understand their behavior.
 5.  To study the impact of simulation parameters (like the number of rolls, number of walks, and clumsiness probability) on the results.
+
+
+## Repository Structure
+
+```
+Game_simulation-_climbing_a_building_with_a_dice  ├── README.md 
+                                                  ├── notebook.ipynb # Your Jupyter Notebook file 
+                                                  ├── script # separate script
+                                                  ├── requirements.txt # required libraries
+                                                  └── images/ # Directory for plots and figures 
+                                                       ├── Walk_structure_0.1_100.png 
+                                                       ├── Walk_structure_0.5_100.png
+                                                       ├── fs_dist_1000_100_0.1_70.png
+                                                       ├── fs_dist_1000_100_0.5_60.png
+                                                       ├── fs_dist_1000_100_0.5_70.png  
+                                                       └── fs_dist_1000_50_0.5_60.png  
+                                         
+```
+
+## Installation and Usage
+To run this notebook or script locally, you will need Python installed. It is recommended to use a virtual environment.
+
+1.  Clone the repository:
+    ```bash
+    git clone https://github.com/josearevalobezic/Game_simulation-_climbing_a_building_with_a_dice.git
+    cd Game_simulation-_climbing_a_building_with_a_dice
+    ```
+2.  Install the required libraries. If you have a `requirements.txt` file, you can do this with pip:
+    ```bash
+    pip install -r requirements.txt
+    ```
+    Otherwise, install `numpy` and `matplotlib` manually:
+    ```bash
+    pip install numpy matplotlib
+    ```
+
+You can interact with the analysis in two ways:
+
+1.  **Using the Jupyter Notebook:** Open the `notebook.ipynb` file in a Jupyter environment (like JupyterLab, Jupyter Notebook, or Google Colab). You can run the cells sequentially to see the simulations and visualizations.
+2.  **Running the Python Script:** Execute the `script.py` file from your terminal:
+    ```bash
+    python script.py
+    ```
+    This will run the simulations and display or save the generated plots.
+
+Feel free to modify the parameters within the notebook or script to explore different scenarios.
+
+## Code Explanation
+The core logic is implemented in the `random_walk.py` file with the following main components:
+- `simulate_random_walk(num_rolls)`: Simulates a single walk for `num_rolls` steps, applying the dice rules and the clumsiness factor. It returns a list representing the steps taken in the walk.
+- `run_simulation(total_walks, num_rolls)`: Executes `total_walks` number of `simulate_random_walk` calls and returns a NumPy array containing all walk trajectories.
+- `analyze_random_walk(all_walks_array)`: Takes the array of all walks, analyzes the final steps, generates a histogram of the final step distribution, and prints the probability of exceeding the `limit_step`.
+- `fifteen_walks(all_walks_array)`: Plots the trajectories of 15 simulated walks to visualize individual paths.
 
 ## Key Insights
 
@@ -85,55 +135,6 @@ The main objectives of this analysis are:
 
 ![](images/Walk_structure_0.1_100.png)
 
+## Contact
+[José Arévalo Bezic] - [jarevalobezic@gmail.com] - [https://github.com/josearevalobezic] - [www.linkedin.com/in/jarevalo-bezic]
 
-## Repository Structure
-
-```
-Game_simulation-_climbing_a_building_with_a_dice  ├── README.md 
-                                                  ├── notebook.ipynb # Your Jupyter Notebook file 
-                                                  ├── script # separate script
-                                                  ├── requirements.txt # required libraries
-                                                  └── images/ # Directory for plots and figures 
-                                                       ├── Walk_structure_0.1_100.png 
-                                                       ├── Walk_structure_0.5_100.png
-                                                       ├── fs_dist_1000_100_0.1_70.png
-                                                       ├── fs_dist_1000_100_0.5_60.png
-                                                       ├── fs_dist_1000_100_0.5_70.png  
-                                                       └── fs_dist_1000_50_0.5_60.png  
-                                         
-```
-
-## Installation and Usage
-To run this notebook or script locally, you will need Python installed. It is recommended to use a virtual environment.
-
-1.  Clone the repository:
-    ```bash
-    git clone https://github.com/josearevalobezic/coin_flip_simulation_and_analysis.git
-    cd coin_flip_simulation_and_analysis
-    ```
-2.  Install the required libraries. If you have a `requirements.txt` file, you can do this with pip:
-    ```bash
-    pip install -r requirements.txt
-    ```
-    Otherwise, install `numpy` and `matplotlib` manually:
-    ```bash
-    pip install numpy matplotlib
-    ```
-
-You can interact with the analysis in two ways:
-
-1.  **Using the Jupyter Notebook:** Open the `flip_a_coin_simulation_and_analysis.ipynb` file in a Jupyter environment (like JupyterLab, Jupyter Notebook, or Google Colab). You can run the cells sequentially to see the simulations and visualizations.
-2.  **Running the Python Script:** Execute the `script_flip_coin.py` file from your terminal:
-    ```bash
-    python script_flip_coin.py
-    ```
-    This will run the simulations and display or save the generated plots.
-
-Feel free to modify the parameters within the notebook or script (e.g., number of flips, probability of tails) to explore different scenarios.
-
-## Code Explanation
-The core logic is implemented in the `random_walk.py` file with the following main components:
-- `simulate_random_walk(num_rolls)`: Simulates a single walk for `num_rolls` steps, applying the dice rules and the clumsiness factor. It returns a list representing the steps taken in the walk.
-- `run_simulation(total_walks, num_rolls)`: Executes `total_walks` number of `simulate_random_walk` calls and returns a NumPy array containing all walk trajectories.
-- `analyze_random_walk(all_walks_array)`: Takes the array of all walks, analyzes the final steps, generates a histogram of the final step distribution, and prints the probability of exceeding the `limit_step`.
-- `fifteen_walks(all_walks_array)`: Plots the trajectories of 15 simulated walks to visualize individual paths.
